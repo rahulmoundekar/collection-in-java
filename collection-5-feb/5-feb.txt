@@ -1,0 +1,168 @@
+Problem statements :solution
+	-fail- fast and fail safe
+	-HashMap & Collection problem 
+
+Cursers 
+	-Iterator
+	-ListIterator
+	-Enumeration
+	
+	
+-----------------
+
+India
+	Maharashtra
+		Pune
+			Karvenagar
+		Mumbai
+			thane
+
+
+	Bihar
+		Patna
+			Aavalahalli
+			Bariatu
+
+---------------------------
+Iterator
+
+Arraylist
+	t1
+		-iteration
+	t2
+		-add
+--------------------------
+ListIterator
+Arraylist
+	t1
+ListIterator
+	t2	
+--------------------------	
+
+java.util.ConcurrentModificationException
+	-fail fast
+----
+avoid this exception
+	fail safe
+	
+	
+cursers :
+	Iterator
+		-methods
+			-hasNext
+			-next
+		-forward	
+		-fail fast
+			-concurrent Process not allow
+	ListIterator
+		
+		-methods
+			-hasNext
+			-next
+			-add
+			-set
+			-previous
+		-forward & backword direction iteration
+		-fail safe
+		-concurrent Process allow
+	Enumeration
+		-forward direction
+		-Lagacy classes
+			-vector
+			-stack
+			-hashtable
+--------------------------------------
+concurrentMap
+	concurrentHashMap--jdk 1.5
+		-hastable
+			-synchronized--thread safe
+		-fail safe
+		-segments--blocks(1-15--)--access---thread(16)
+		
+		
+		
+	chm.put("a", 23);--hashcode-hashvalue(indexfor(hc,16))
+	chm.put("B", 26);
+	
+	while()
+	{
+		chm.put("c","C");
+	}
+		
+-----------------------------
+
+Hashtable :
+	-size 11
+	-CC*2;
+	-all methods are synchronized
+	-thread safe
+	-legacy
+
+dictionary(AC)
+	-Properties
+		-legacy class
+		-allow only String as key String as value upto 1.2
+		-1.2
+			-object
+	
+ .properties
+ 	-validation
+ 	-dynamic ----runtime --values --
+ 	-no need to compilation and execution
+ 	-performance--faster than other type of files
+ 	-String type of data allow
+ 
+ 	name, value pairs
+ 		-String
+ 
+ 	-setProperty("")
+ 	-getProperty();
+ 	
+ 	1.2 
+ 		put
+ 			object, object			
+---------------------------------------------------------------	
+Queue : FIFO
+	priorityQueue : unorder--thread
+	Deque
+		ArrayDeque
+			-stack, LinkedList--faster		
+	-BlockingQueue
+		1.5
+		
+---------------------------------------------------------------
+
+
+		
+	
+	
+
+				
+		
+	
+
+
+
+
+
+
+			
+		
+	
+	
+			
+	
+
+
+
+
+
+
+
+	
+	
+	
+
+
+
+
