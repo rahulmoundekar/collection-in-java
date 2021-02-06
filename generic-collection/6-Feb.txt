@@ -1,3 +1,109 @@
 Generic Collection:
+Collection <>
+
+-HashMap hm=new HashMap();
+	hm.put("Java","Programming  Language");
+	hm.put(1,1);
+	
+ -Same type of elements
+ -avoid typecasting
+ 	-level
+ 		-class
+ 		-object
+ 
+ syntax :
+ 	<E> <T> <?> : 
+ 	E:  same type of elements 
+ 	T: same type of Class 
+ 	? : object
+ 
+ 	List<String> list=new ArrayList<String>();
+ 	List<String> list=new ArrayList<>();
+  	List list=new ArrayList<String>();
+  	List<String> list=new ArrayList();
+ 
+---------------------------------------------------
+HashMap internal working :
+	
+	hashcode():
+	equals():
+	
+	
+	Employee e1=new Employee(1,"abc"); hashcode-generte--equals(hashcode()) --present or not
+	Employee e2=new Employee(1,"abc");
+	
+	e1.equals(e2)====> false
+	
+	sop(e1.hashcode()); ===>101
+	
+----------------------------------------------------------
+	-jvm always create unique hashcode
+	- if hashcode and equals ovrrides then--may or may not --duplicate
+two object have same hashcode then equals method return --->true
+ ----------------------------------------------------------------------
+ HashMap hm=new HashMap();
+ 	hm.put("A", "CPP");
+ 	hm.put("B","Java");
+ 	hm.put("A","Python");
+ 	hm.put("C","Selenium");
+ 	hm.put(null,"C");
+ 	hm.put(null,"K");
+ 	
+ 1} 0 index always reserved for null key
+ 2} default bucket --16
+ 		-array
+ 		
+ 3} key==A --compute --hashcode- 104--indexFor(hashcode,16)-hashvalue(bucketLocation)-4;
+ 	location 4--- linkedlist--values stored.
+ 		4.equals(object.value)
+ 4} 7-location--equals()..present or not--not--stored
+ 5} 4-locaiton--equals()--present--current value overwrite--collision 	
+ 6} hashcode --same--107--7	--equals()(key==this.key)-- values stored in diff-linkedlist
+ 7} null key--then stored into 0 index--value -stored		
+ 8} null key--jump into 0 index--equals-value overwrite		
+ -----------------------------
+ get :
+ 	=hm.get(B);
+ 	
+ 	1} hashcode--hashvalue--7--jump-7 index-equals(B)-present or not--if present return value
+ 	not present return null;
+ 	2} hm.get(null);
+ 		hashcode()--0-jump into 0 index--equals(null)--reutrn value
+------------------------------------------------------------------------------------------------ 
+ 	
+ 	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
