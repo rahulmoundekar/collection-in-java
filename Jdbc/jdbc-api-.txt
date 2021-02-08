@@ -1,0 +1,161 @@
+File handling :
+	.
+collection Framework :
+---------------------
+
+Jdbc APi :
+	we can communicate with database
+	
+Database ?
+	-collection table 
+	-huge amount of data stored
+	-data manupulation	
+	-Normalization-5NF-2,3NF
+	
+	Vendors :
+		Query dependent
+			-MySQL
+			-H2DB
+			-Derby
+			-Oracle
+			-PostGress (PLSQL)
+		Script: bigdata	
+			-mongodb
+			-hadoop
+	
+employee
+	id
+	
+	Address adress
+
+Student	
+	Address adress
+
+
+Address 
+	
+	house no
+	area
+	landmark
+	city
+	zipcode
+----------------------------------------
+MYSQL :
+	-50m
+	-index maintain
+	-does not support to sequence
+		e.g
+			id  name   address
+			1   abc		Karvenagar
+			2
+			4
+			5
+			6
+	-mysql installation
+		https://dev.mysql.com/downloads/installer/
+---------------------------
+Data types :
+	int
+	varchar(45)
+	float
+	double
+	bigInt
+	longtext
+	date
+	datetime
+	timestamp
+	boolean
+	tynint
+	blob------file, image
+-----------------------------------
+-DML : Data manipulation language
+		insert, update, delete, alter
+-DDL : data definition language
+	create database, create table, drop ,truncate
+	
+-------------------------------------------------
+1} always create database
+	-database have multiple tables
+	-table have multiple rows and columns
+2} tables, view, trigger, procedure, functions
+3} prepared Queries
+----------------------------------------
+
+create databases clc;
+use clc;
+create table employee(id int, name varchar(45), mobile varchar(10));
+insert into employee(1,"rahul","8384834");
+update employee set name="rakesh" where id=1;
+delete from employee where id=1;
+select * from employee;
+select id, name from employee;
+select * from employee where id=1
+select * from employee where salary>=10000
+select max(salary) from employee;
+select min(salary) from employee;
+select count(*) from employee;
+select sum(salary) from employee;
+select e.id , e.name,  a.id, a.address from employee e,  address a;
+------------------------------------------------------
+JDBC :
+	-java database connectivity
+	-huge amount of data can stored dynamically
+ODBC : open database connectivity
+	MSAccess
+		excel
+		
+		client ---server
+			-jdbc-odbc driver---native lib+software installion
+			-native driver--client--server
+			-network driver--LAN connection
+			-thin driver : client side work--no need to config server
+--------------------------------------------------
+5 step :
+	
+	1} load driver--mysql
+		
+	Class.forName("com.mysql.cj.jdbc.Driver");
+
+	2} to connect with database : connection established
+		Connection con=DriverManager.getConnection(url, username, password);
+		url : jdbc:mysql://localhost/ip:3306/databasename
+		username : root
+		password : root
+		
+	3} create statments for queries exeuction
+		Statement---execution
+		PreparedStatement-faster--runtime inputs
+		CallableStatement-----procedure, precompile query-faster
+			
+	4} boolean =execute()--c,insert, drop
+		int =executeUpdate()--insert, update, delete,
+		ResultSet =executeQuery()	-select	
+	 	
+	5} connection close
+----------------------------------------------		
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+	
+	
+			
+	
+	
+	
+	
+	
+
+
+		
+	
+
